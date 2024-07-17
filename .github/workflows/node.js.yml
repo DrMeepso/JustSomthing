@@ -35,5 +35,5 @@ jobs:
     - run: npx ts-node gitRepo.ts
     - run: git config --global user.name "Markov Chain Bot"
     - run: git config --global user.email "email@domain.com"
-    - run: git add readme.md; git commit -m "update message"
+    - run: git add readme.md; git commit -m "Update Quote"
     - run: git push
