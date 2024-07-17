@@ -32,4 +32,4 @@ All code for the actual Markov chain is in `index.ts`.
 
 ---
 
-*Enjoy and reflect on the generated wisdom!* 🙏✨
+*Enjoy*✨
