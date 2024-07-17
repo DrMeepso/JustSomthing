@@ -40,8 +40,10 @@ function runContext(seed: string[]){
     return nextToken;
 
 }
+let args = process.argv
+args.splice(0,2);
 
-let seed = "come".toLowerCase();
+let seed = args.join(" ").toLowerCase();
 let stop = false;
 let iterations = 0;
 while (!stop) {
