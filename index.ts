@@ -42,6 +42,7 @@ export function runContext(seed: string[]) {
 }
 
 export function runEntire(context: string[]) {
+    let info = "";
     let seed = context.join(" ").toLowerCase();
     let stop = false;
     let iterations = 0;
@@ -58,6 +59,7 @@ export function runEntire(context: string[]) {
             }
             v--;
         }
+
         if (nextToken === undefined) {
             console.log("[end] Seed is undefined!");
             stop = true;
@@ -69,7 +71,9 @@ export function runEntire(context: string[]) {
             stop = true;
             break;
         } else {
-            console.log(context, nextToken);
+            if (context)
+                info += `[ ${context.join(", ")} ]: ${nextToken}\n`;
+
             seed += " " + nextToken
             iterations += 1;
             if (seed.includes(".")) {
@@ -77,8 +81,13 @@ export function runEntire(context: string[]) {
             }
         }
     }
+    console.log(info);
     console.log("====================================");
     console.log(`Iterations: ${iterations}`);
     console.log(seed);
-    return seed;
+    return {
+        string: seed,
+        iterations: iterations,
+        info: info
+    }
 }
