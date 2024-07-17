@@ -30,6 +30,13 @@ This repo will update the latest quote in this README every 10 minutes. ⏳
 
 All code for the actual Markov chain is in `index.ts`.
 
+## ❓ Why
+
+I was just messing around with Markov Chains and found that the Bible surprisingly yielded good results when prompted. 
+It was suggested by a friend, and I am in no way christian.
+
+Feel free to adjust the text further to accurately reflect your intent and experience with the project!
+
 ---
 
 *Enjoy*✨
